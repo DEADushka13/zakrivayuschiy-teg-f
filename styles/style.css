@@ -9,7 +9,6 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -18,7 +17,6 @@
   /* display: flex;
   flex-direction: column; */
 }
-
 /* HEADER */
 .header {
   display: flex;
@@ -31,11 +29,9 @@
   text-align: center;
   line-height: 1.4;
 }
-
 .logo span {
   font-size: 65px;
 }
-
 .logo__container {
   width: 50vw;
   max-width: var(--main-width);
@@ -67,15 +63,19 @@ main {
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
   font-variation-settings: "wght" var(--title-weight);
+  margin: 3px;
 }
 .card__img {
+  width: 50vw;
   max-width: 100%;
   overflow: hidden;
+  max-height: 700px;
 }
 .card__discription {
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
   font-variation-settings: "wght" var(--text-weight);
+  margin: 25px;
 }
 .button__text {
   font-family: var(--accent-font), sans-serif;
@@ -87,6 +87,9 @@ main {
   height: 38px;
   margin: 25px;
   align-self: flex-end;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .save__button {
   width: 335px;
@@ -95,5 +98,19 @@ main {
   justify-content: space-around;
   align-items: center;
 }
-
+.card__label {
+  position: absolute;
+  font-family: var(--accent-font), sans-serif;
+  mix-blend-mode: hard-light;
+  margin: 25px;
+  right: 25vw;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+@supports ((text-stroke: 1px white) or (-webkit-text-stroke: 1px white)) {
+  .card__label {
+    -webkit-text-stroke: 1px white;
+    text-stroke: 1px white;
+    text-shadow: none;
+  }
+}
 /* --- */
