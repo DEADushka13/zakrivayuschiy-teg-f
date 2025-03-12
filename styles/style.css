@@ -38,7 +38,7 @@
 
 .logo__container {
   width: 50vw;
-  max-width: var(--header-width);
+  max-width: var(--main-width);
   background-color: white;
   height: 40vh;
   max-height: var(--header-height);
@@ -50,5 +50,50 @@
 }
 /* --- */
 /* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5.2vh;
+}
+.card {
+  width: 50vw;
+  max-width: var(--main-width);
+  border: 2px black solid;
+  display: flex;
+  flex-direction: column;
+}
+.card__title {
+  font-family: var(--main-font), sans-serif;
+  font-size: 18px;
+  font-variation-settings: "wght" var(--title-weight);
+}
+.card__img {
+  max-width: 100%;
+  overflow: hidden;
+}
+.card__discription {
+  font-family: var(--main-font), sans-serif;
+  font-size: 18px;
+  font-variation-settings: "wght" var(--text-weight);
+}
+.button__text {
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+}
+.card__button {
+  border: 2px black solid;
+  width: 130px;
+  height: 38px;
+  margin: 25px;
+  align-self: flex-end;
+}
+.save__button {
+  width: 335px;
+  height: 51px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 /* --- */
