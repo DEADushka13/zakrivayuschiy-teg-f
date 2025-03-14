@@ -391,11 +391,7 @@
         <h2 class="card__title">«Сейчас я здесь»</h2>
         <div class="card__img__container">
           <p class="card__label">Космос</p>
-          <img
-            class="card__img"
-            src="./images/brain.gif"
-            alt="Expanse"
-          />
+          <img class="card__img" src="./images/brain.gif" alt="Expanse" />
         </div>
         <article class="card__discription">
           Сейчас вы уже очень много знаете о вёрстке. Но это только начало.
@@ -442,12 +438,21 @@
           <span class="button__text">Like</span>
         </button>
       </div>
-      <button class="save__button">
+      <button
+        type="button"
+        onclick="window['dialog-id'].showModal()"
+        aria-controls="dialog-id"
+        class="save__button"
+      >
         <svg width="21" height="21" viewBox="0 0 39 39">
           <use href="./svg/floppy.svg#floppy" />
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
+      <dialog id="dialog-id">
+        Вставьте дискету, чтобы продолжить
+        <button type="button" onclick="window['dialog-id'].close()">Ок</button>
+      </dialog>
     </main>
     <script src="./scripts/like.js"></script>
   </body>

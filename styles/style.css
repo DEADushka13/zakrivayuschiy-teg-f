@@ -70,6 +70,7 @@ main {
   max-width: 100%;
   overflow: hidden;
   max-height: 700px;
+  /* position: relative; */
 }
 .card__discription {
   font-family: var(--main-font), sans-serif;
