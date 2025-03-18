@@ -16,6 +16,8 @@
   font-variation-settings: "wght" var(--text-weight);
   /* display: flex;
   flex-direction: column; */
+  background-image: var(--background-gradient);
+  background-size:cover;
 }
 /* HEADER */
 .header {
@@ -24,17 +26,17 @@
 }
 .logo {
   font-family: var(--accent-font, sans-serif);
-  font-size: 23px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
   text-align: center;
-  line-height: 1.4;
 }
 .logo span {
-  font-size: 65px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  display: inline-block;
+  margin-bottom: 20px;
 }
 .logo__container {
-  width: 50vw;
-  max-width: var(--main-width);
+  width: var(--main-width);
   background-color: white;
   height: 40vh;
   max-height: var(--header-height);
@@ -113,5 +115,22 @@ main {
     text-stroke: 1px white;
     text-shadow: none;
   }
+}
+
+
+
+@media (width <= 375px){
+.logo__container{
+  /* width: 100%; */
+  height: 327px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+/* .logo {
+  font-size: 1.60vw;
+} */
+ /* .logo span {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+}  */
 }
 /* --- */

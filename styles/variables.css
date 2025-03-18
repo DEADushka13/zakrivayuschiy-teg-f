@@ -4,6 +4,13 @@
   --accent-font: "PressStart2P";
   --title-weight: 700;
   --text-weight: 400;
-  --main-width: 700px;
-  --header-height:364px;
+  --main-width: clamp(375px, 50vw, 700px);
+  --header-height: 364px;
+  --background-gradient: repeating-linear-gradient(
+      0deg,
+      #d3d3d3,
+      transparent 2px
+    ),
+    repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
 }
