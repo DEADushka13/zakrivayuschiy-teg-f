@@ -14,10 +14,9 @@
   min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
   font-variation-settings: "wght" var(--text-weight);
-  /* display: flex;
-  flex-direction: column; */
   background-image: var(--background-gradient);
-  background-size:cover;
+  background-size: cover;
+  background-attachment: fixed;
 }
 /* HEADER */
 .header {
@@ -55,6 +54,7 @@ main {
   gap: 5.2vh;
 }
 .card {
+  background-color: white;
   width: 50vw;
   max-width: var(--main-width);
   border: 2px black solid;
@@ -117,19 +117,17 @@ main {
   }
 }
 
-
-
-@media (width <= 375px){
-.logo__container{
-  /* width: 100%; */
-  height: 327px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-/* .logo {
+@media (width <= 375px) {
+  .logo__container {
+    /* width: 100%; */
+    height: 327px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  /* .logo {
   font-size: 1.60vw;
 } */
- /* .logo span {
+  /* .logo span {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }  */
 }
