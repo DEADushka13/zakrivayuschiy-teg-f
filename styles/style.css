@@ -68,9 +68,8 @@ main {
   margin: 3px;
   line-height: 1.4;
   margin-left: 10px;
-  
 }
-.card__img__container{
+.card__img__container {
   height: 696px;
   border-top: 2px black solid;
   border-bottom: 2px black solid;
