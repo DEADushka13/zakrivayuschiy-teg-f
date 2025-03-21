@@ -208,7 +208,7 @@
         type="button"
         onclick="window['dialog-id'].showModal()"
         aria-controls="dialog-id"
-        class="save__button"
+        class="save__button button"
       >
         <svg width="21" height="21" viewBox="0 0 39 39">
           <use href="./svg/floppy.svg#floppy" />
@@ -216,8 +216,21 @@
         <span class="button__text">Сохранить на память</span>
       </button>
       <dialog id="dialog-id">
-        Вставьте дискету, чтобы продолжить
-        <button type="button" onclick="window['dialog-id'].close()">Ок</button>
+        <div class="save__button-container">
+          <svg width="39" height="39" viewBox="0 0 39 39">
+            <use href="./svg/floppy.svg#floppy" />
+          </svg>
+          <span class="button__text save__text"
+            >Вставьте дискету, чтобы продолжить</span
+          >
+        </div>
+        <button
+          class="ok_button button"
+          type="button"
+          onclick="window.dialog-id.close()"
+        >
+          <span class="button__text">Ок</span>
+        </button>
       </dialog>
     </main>
     <script src="./scripts/like.js"></script>
