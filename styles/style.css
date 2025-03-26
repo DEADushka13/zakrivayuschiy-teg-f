@@ -95,6 +95,7 @@ main {
   margin: 1.736vw;
   right: 26vw;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  z-index: 1;
 }
 .card__buttons {
   display: flex;
@@ -154,6 +155,40 @@ main {
 dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 }
+
+.expanse-img {
+  filter: brightness(80%);
+}
+
+.stars-img {
+  filter: brightness(30%);
+}
+
+.flow-img {
+  filter: brightness(50%);
+}
+.reality-img {
+  object-fit: cover;
+  filter: contrast(180%);
+}
+
+.gravity-img {
+  object-fit: cover;
+  filter: blur(3px);
+}
+
+.gate-img {
+  filter: grayscale(50%);
+}
+.mars-img {
+  object-fit: cover;
+  filter: blur(1px);
+}
+
+.space-img {
+  filter: contrast(140%);
+}
+
 @supports ((text-stroke: 1px white) or (-webkit-text-stroke: 1px white)) {
   .card__label {
     -webkit-text-stroke: 1px white;
