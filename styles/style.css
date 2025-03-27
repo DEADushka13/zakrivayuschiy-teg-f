@@ -241,13 +241,44 @@ dialog::backdrop {
 }
 
 /* СЕРДЦЕ */
-.sparks{
+.sparks {
   opacity: 0;
 }
+
+.core {
+  fill: white;
+  transition: fill 0.3s;
+  transition-delay: 0.03s;
+}
+
+.like-icon:hover .core {
+  fill: var(--heart-cont-color);
+  transition: fill 0.3s;
+}
+
+.main-body {
+  fill: white;
+  transition: fill 0.3s;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--heart-cont-color);
+  transition: fill 0.3s;
+  transition-delay: 0.05s;
+}
+
+.like-icon:active .core {
+  fill: var(--heart-color);
+  transition: fill 0.3s;
+}
+
+.like-icon:active .main-body {
+  fill: var(--heart-color);
+  transition: fill 0.3s;
+  transition-delay: 0.05s;
+}
+
 /* ------ */
-
-
-
 
 @supports ((text-stroke: 1px white) or (-webkit-text-stroke: 1px white)) {
   .card__label {
