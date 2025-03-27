@@ -207,7 +207,7 @@ dialog::backdrop {
 }
 
 .expanse-img {
-  filter: brightness(80%);
+  filter: brightness(0%);
 }
 
 .stars-img {
