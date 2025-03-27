@@ -303,6 +303,10 @@ dialog::backdrop {
   animation: scale-heart 0.3s 0.1s ease-in 1;
 }
 
+.like-icon.is-liked .sparks {
+  animation: op-spark 0.3s 0.3s ease-in 1;
+}
+
 @keyframes scale-heart {
   0% {
     scale: 1;
@@ -312,6 +316,18 @@ dialog::backdrop {
   }
   100% {
     scale: 1;
+  }
+}
+
+@keyframes op-spark {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
