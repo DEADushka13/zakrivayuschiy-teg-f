@@ -240,6 +240,15 @@ dialog::backdrop {
   filter: contrast(140%);
 }
 
+/* СЕРДЦЕ */
+.sparks{
+  opacity: 0;
+}
+/* ------ */
+
+
+
+
 @supports ((text-stroke: 1px white) or (-webkit-text-stroke: 1px white)) {
   .card__label {
     -webkit-text-stroke: 1px white;
