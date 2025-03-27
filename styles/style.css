@@ -54,6 +54,7 @@ main {
   gap: 5.2vh;
 }
 .card {
+  position: relative;
   background-color: white;
   width: var(--main-width);
   max-width: var(--main-width);
@@ -93,11 +94,12 @@ main {
   font-family: var(--accent-font), sans-serif;
   mix-blend-mode: hard-light;
   margin: 1.736vw;
-  right: 26vw;
+  right: 0px;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
   z-index: 1;
 }
 .card__buttons {
+  position: relative;
   display: flex;
   justify-content: right;
   margin: 0px 25px 25px 0px;
@@ -107,18 +109,17 @@ main {
   width: 130px;
 }
 .button {
+  position: relative;
   border-top: 2px black solid;
   background-color: white;
+  overflow: hidden;
 }
 .button__text {
   font-weight: var(--text-weight);
   font-size: 14px;
   font-family: var(--accent-font);
 }
-.card__icon-button {
-  background-color: white;
-  border: none;
-}
+
 .save__button {
   display: flex;
   width: 335px;
@@ -143,6 +144,55 @@ main {
   height: 38px;
   text-transform: uppercase;
 }
+
+.button:focus {
+  outline: none;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.button:hover::before {
+  content: "";
+  transform: translateX(0);
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 0 black;
+}
+
+.button span {
+  position: relative;
+  z-index: 1;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+.card__icon-button {
+  background-color: white;
+  border: 2px solid transparent;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  border-color: black;
+  transition: border-color 0.3s ease;
+}
+
 #dialog-id[opened] {
   display: flex;
   flex-direction: column;
@@ -180,6 +230,7 @@ dialog::backdrop {
 .gate-img {
   filter: grayscale(50%);
 }
+
 .mars-img {
   object-fit: cover;
   filter: blur(1px);
