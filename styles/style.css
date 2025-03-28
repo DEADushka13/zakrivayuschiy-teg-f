@@ -113,20 +113,25 @@ main {
   justify-content: right;
   margin: 0px 25px 25px 0px;
 }
-.card__like-button {
-  width: 130px;
-}
+
 .button {
   position: relative;
   border-top: 2px black solid;
   background-color: white;
   overflow: hidden;
 }
+
+.button:focus {
+  outline: none;
+}
+
 .button__text {
+  display: inline-block;
   font-weight: var(--text-weight);
   font-size: 14px;
   font-family: var(--accent-font), fantasy;
   line-height: 90%;
+  padding: 0 37px;
 }
 .save__button {
   display: flex;
@@ -153,37 +158,23 @@ main {
   text-transform: uppercase;
 }
 
-.button:focus {
-  outline: none;
-}
-
-.button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
-  z-index: 0;
-}
-
-.button:hover::before {
-  content: "";
-  transform: translateX(0);
-}
-
-.button:focus-visible {
-  box-shadow: 2px 2px 0 0 black;
-}
-
 .button span {
   position: relative;
   z-index: 1;
   color: white;
   mix-blend-mode: difference;
+}
+
+.button p {
+  position: relative;
+  z-index: 1;
+  color: white;
+  mix-blend-mode: difference;
+}
+
+
+#floppy{
+  fill: red;
 }
 
 .card__icon-button {
@@ -193,12 +184,6 @@ main {
 
 .card__icon-button:focus {
   outline: none;
-}
-
-.card__icon-button:focus-visible {
-  outline: none;
-  border-color: black;
-  transition: border-color 0.3s ease;
 }
 
 dialog[open] {
@@ -244,99 +229,6 @@ dialog::backdrop {
 .contrast-140-img {
   filter: contrast(140%);
 }
-
-/* СЕРДЦЕ */
-.sparks {
-  opacity: 0;
-}
-
-.core {
-  fill: white;
-  transition: fill 0.3s;
-  transition-delay: 0.03s;
-}
-
-.like-icon:hover .core {
-  fill: var(--heart-cont-color);
-  transition: fill 0.3s;
-}
-
-.main-body {
-  fill: white;
-  transition: fill 0.3s;
-}
-
-.like-icon:hover .main-body {
-  fill: var(--heart-cont-color);
-  transition: fill 0.3s;
-  transition-delay: 0.05s;
-}
-
-.like-icon:active .core {
-  fill: var(--heart-color);
-  transition: fill 0.3s;
-}
-
-.like-icon:active .main-body {
-  fill: var(--heart-color);
-  transition: fill 0.3s;
-  transition-delay: 0.05s;
-}
-
-.like-icon.is-liked .core {
-  fill: var(--heart-color);
-  transition: fill 0.3s;
-}
-
-.like-icon.is-liked .main-body {
-  fill: var(--heart-color);
-  transition: fill 0.3s;
-  transition-delay: 0.03s;
-}
-
-.like-icon.is-liked .contour {
-  fill: var(--heart-color);
-  transition: fill 0.3s;
-  transition-delay: 0.06s;
-}
-
-.heart {
-  transform-origin: 50% 50%;
-}
-
-.like-icon.is-liked .heart {
-  animation: scale-heart 0.3s 0.1s ease-in 1;
-}
-
-.like-icon.is-liked .sparks {
-  animation: op-spark 0.3s 0.3s ease-in 1;
-}
-
-@keyframes scale-heart {
-  0% {
-    scale: 1;
-  }
-  50% {
-    scale: 1.25;
-  }
-  100% {
-    scale: 1;
-  }
-}
-
-@keyframes op-spark {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-/* ------ */
 
 @supports ((text-stroke: 1px white) or (-webkit-text-stroke: 1px white)) {
   .card__label {
