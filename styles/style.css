@@ -24,23 +24,26 @@
   justify-content: center;
 }
 .logo {
-  font-family: var(--accent-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
   text-align: center;
 }
-.logo span {
+.logo_html {
+  font-family: var(--accent-font, fantasy);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
   margin-bottom: 20px;
+  text-decoration: none;
 }
 .logo__container {
   width: var(--main-width);
   background-color: white;
-  height: 40vh;
-  max-height: var(--header-height);
+  padding: 128px 0;
   border: 2px black solid;
-  margin: 10.625vh 0 10.625vh 0;
+  margin: 100px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,6 +68,7 @@ main {
 .card__title {
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
+  font-variation-settings: inherit;
   font-variation-settings: "wght" var(--title-weight);
   margin: 3px;
   line-height: 1.4;
@@ -78,20 +82,25 @@ main {
 }
 .card__img {
   width: 100%;
-  height: 72.917vh;
+  height: 100%;
   max-height: 700px;
+  object-fit: cover;
+  object-position: center;
 }
 .card__discription {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
-  font-variation-settings: "wght" var(--text-weight);
   margin: 30px 25px 25px 25px;
   line-height: 21px;
 }
 .card__label {
+  opacity: 0.5;
   font-size: 14px;
   position: absolute;
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), fantasy;
   mix-blend-mode: hard-light;
   margin: 1.736vw;
   right: 0px;
@@ -103,7 +112,6 @@ main {
   display: flex;
   justify-content: right;
   margin: 0px 25px 25px 0px;
-  height: 38px;
 }
 .card__like-button {
   width: 130px;
@@ -117,7 +125,7 @@ main {
 .button__text {
   font-weight: var(--text-weight);
   font-size: 14px;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
 }
 
 .save__button {
@@ -193,50 +201,47 @@ main {
   transition: border-color 0.3s ease;
 }
 
-#dialog-id[opened] {
+dialog[open] {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
   width: 353px;
-  height: 191px;
+  padding: 30px 0;
 }
 dialog::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 }
 
-.expanse-img {
+.bright-0-img {
   filter: brightness(0%);
 }
 
-.stars-img {
+.bright-30-img {
   filter: brightness(30%);
 }
 
-.flow-img {
+.bright-50-img {
   filter: brightness(50%);
 }
-.reality-img {
-  object-fit: cover;
+.contrast-180-img {
   filter: contrast(180%);
 }
 
-.gravity-img {
-  object-fit: cover;
+.blur-3-img {
   filter: blur(3px);
 }
 
-.gate-img {
+.gray-bright-img {
   filter: grayscale(50%) brightness(80%);
 }
 
-.mars-img {
-  object-fit: cover;
+.blur-1-img {
   filter: blur(1px);
 }
 
-.space-img {
+.contrast-140-img {
   filter: contrast(140%);
 }
 
@@ -342,7 +347,8 @@ dialog::backdrop {
 }
 @media (width <= 375px) {
   .logo__container {
-    height: 327px;
+    /* height: 327px; */
+    padding: 30px 0;
     margin-top: 100px;
     margin-bottom: 100px;
   }
