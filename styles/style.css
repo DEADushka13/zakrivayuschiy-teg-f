@@ -126,8 +126,8 @@ main {
   font-weight: var(--text-weight);
   font-size: 14px;
   font-family: var(--accent-font), fantasy;
+  line-height: 90%;
 }
-
 .save__button {
   display: flex;
   width: 335px;
@@ -348,7 +348,7 @@ dialog::backdrop {
 @media (width <= 375px) {
   .logo__container {
     /* height: 327px; */
-    padding: 30px 0;
+    padding: 120px 0;
     margin-top: 100px;
     margin-bottom: 100px;
   }
