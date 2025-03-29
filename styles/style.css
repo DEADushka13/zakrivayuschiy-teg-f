@@ -131,7 +131,7 @@ main {
   font-size: 14px;
   font-family: var(--accent-font), fantasy;
   line-height: 90%;
-  padding: 0 37px;
+  /* padding: 0 37px; */
 }
 .save__button {
   display: flex;
@@ -165,15 +165,21 @@ main {
   mix-blend-mode: difference;
 }
 
-.button p {
+.button svg {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   color: white;
   mix-blend-mode: difference;
 }
 
+.button p {
+  position: relative;
+  /* z-index: 1; */
+  color: white;
+  mix-blend-mode: difference;
+}
 
-#floppy{
+.floppy-svg {
   fill: red;
 }
 
