@@ -139,6 +139,7 @@ main {
   height: 55px;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 103px;
 }
 .save__text {
   display: inline-block;
