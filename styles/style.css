@@ -54,7 +54,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5.2vh;
+  gap: 52px;
 }
 .card {
   position: relative;
@@ -68,7 +68,6 @@ main {
 .card__title {
   font-family: var(--main-font), sans-serif;
   font-size: 18px;
-  font-variation-settings: inherit;
   font-variation-settings: "wght" var(--title-weight);
   margin: 3px;
   line-height: 1.4;
@@ -112,9 +111,13 @@ main {
   display: flex;
   justify-content: right;
   margin: 0px 25px 25px 0px;
+  /* проблема с высотой контента(вариативного текста) */
   max-height: 38px;
+  padding: 0px;
 }
-
+/* .like__text{
+  font-variation-settings: 'BLDA' 90%;
+} */
 .card__like-button {
   display: flex;
   justify-content: center;
@@ -138,7 +141,6 @@ main {
   font-weight: var(--text-weight);
   font-size: 14px;
   font-family: var(--accent-font), fantasy;
-  line-height: 260%;
   /* padding: 0 37px; */
 }
 .save__button {
@@ -175,24 +177,26 @@ main {
   text-transform: uppercase;
 }
 
-.button span {
-  position: relative;
-  z-index: 1;
-  color: white;
-  mix-blend-mode: difference;
+/* #floppy{
+  color: black;
+  fill: black;
+} */
+/* #floppy{
+  color: black;
 }
+svg{
+  fill: black;
+} */
+/* .save__button-container{
+  color: black;
+  fill: black;
+} */
 
+.button span,
 .button svg {
   position: relative;
-  /* z-index: 1; */
-  color: white;
-  mix-blend-mode: difference;
-}
-
-.button p {
-  position: relative;
-  /* z-index: 1; */
-  color: white;
+  z-index: 2;
+  color: #fff;
   mix-blend-mode: difference;
 }
 
@@ -251,6 +255,11 @@ dialog::backdrop {
   filter: contrast(140%);
 }
 
+.dialog__floppy {
+  width: 39px;
+  height: 39px;
+}
+
 @supports ((text-stroke: 1px white) or (-webkit-text-stroke: 1px white)) {
   .card__label {
     -webkit-text-stroke: 1px white;
@@ -258,13 +267,6 @@ dialog::backdrop {
     text-shadow: none;
   }
 }
-
-/* @media (width < 1440px) {
-  .card__img {
-    max-height: 100%;
-    max-height: 100%;
-  }
-} */
 
 @media (width <= 375px) {
   .logo__container {
@@ -299,9 +301,18 @@ dialog::backdrop {
   .save-line-height {
     line-height: 1;
   }
-  .save__floppy {
+  .floppy-save {
     width: 28px;
     height: 28px;
+  }
+  /* dialog{
+    opacity: 0.6;
+  } */
+  .save__button-container {
+    width: 257px;
+  }
+  .ok_button {
+    width: 257px;
   }
 }
 /* --- */
