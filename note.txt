@@ -1,2 +1,3 @@
 https://clamp.font-size.app/ - Сайт для расчёта адаптивного размера шрифта
 https://unsplash.com/ - Поиск картинок
+https://gitmoji.dev/ - эмоджики для гита
